@@ -1,0 +1,38 @@
+<h1>Signals in Angular v16</h1>
+<p>
+    Signals provide a new way for our code to tell our templates (and other code) that our data has changed. This
+    improves Angular's change detection, which also improves performance, and makes our code more reactive.
+</p>
+<p>
+    A signal is a special type of variable that holds a value. But unlike other variables, a signal also provides
+    notification when the variable value changes.
+</p>
+<p>
+    The signal() method must always be supplied with a value. If no data type is specified, the method reads the type
+    from the given value in the function parameter.
+</p>
+<p>There are two types of signals:</p>
+<ul>
+    <li>Signal</li>
+    <li>WritableSignal</li>
+</ul>
+
+<h2>Methods for Signal</h2>
+<ul>
+    <li><strong><code> [set(value: T): void]</code></strong> - set the signal to a new value, and notify </li>
+    <li><strong><code> [update(updateFn: (value: T) => T)]</code></strong> - update the value of the signal based on
+        its current value, and notify </li>
+    <li><strong><code> [mutate(mutatorFn: (value: T) => void)</code></strong> - update the current value by mutating it
+        in-place, and notify </li>
+</ul>
+
+<h2>RxJS Interop</h2>
+<ul>
+    <li><strong><code>fromObservable()</code></strong> - function converts a observable into an signal</li>
+    <li><strong><code>fromSignal()</code></strong> - function converts a signal into an observable</li>
+</ul>
+<p>
+    Both methods are from the package <code>'@angular/core/rxjs-interop'</code>
+</p>
+
+<h2><a href="https://github.com/angular/angular/discussions/49685">RFC: Angular Signals</a></h2>

@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .navbar__wrapper {
+        display: flex;
+        height: 100%;
+        .navbar__section {         
+            margin-left: 1rem;
+        }
+    }
+}

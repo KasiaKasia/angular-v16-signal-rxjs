@@ -1,0 +1,14 @@
+<h1>Signal form</h1>
+
+<label for="first-name">First Name: </label>
+<input id="first-name" [value]="firstName()" (input)="setFirstName($event)" type="text" placeholder="First name">
+
+<label for="last-name">Last Name: </label>
+<input id="last-name" [value]="lastName()" (input)="setLastName($event)" type="text" placeholder="Last name">
+
+<label for="password">Password: </label>
+<input id="password" [value]="password()" (input)="setPassword($event)" type="text" placeholder="Password">
+
+<label for="repeatPassword">Repeat password: </label>
+<input id="repeatPassword" [value]="repeatPassword()" (input)="setRepeatPassword($event)" type="text" placeholder="Repeat password">
+{{passwordMatch() }}
